@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <script src="../build/react.js"></script>
@@ -21,5 +21,40 @@
         document.getElementById('example')
       );
     </script>
+  </body>
+</html> -->
+
+<!-- Created by 67 on 2018/1/15 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+  </head>
+  <body>
+    <div></div>
+    <script type="text/babel">
+      var arr = new Array("A","B","C");
+
+      ReactDOM.render(
+        <div>
+          {
+            arr.map( function(currentValue){
+              return <p>我是{currentValue}君</p>  
+            })
+          }
+        </div>,
+        document.getElementsByTagName("div")[0]
+      );
+    </script>
+    <!-- <script type="text/javascript">
+      var divs=document.getElementsByTagName('div');
+      var count=0;
+      for(var i=0;i<divs.length;i++){
+        count++;
+      }
+      console.log(count);
+    </script> -->
   </body>
 </html>
