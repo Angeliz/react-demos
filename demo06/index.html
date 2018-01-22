@@ -7,7 +7,7 @@
   </head>
   <body>
     <div id="example"></div>
-    <script type="text/babel">
+    <!-- <script type="text/babel">
 
       var data = 123;
 
@@ -26,6 +26,24 @@
         document.getElementById('example')
       );
 
+    </script> -->
+    <script type="text/babel">
+      var MyTitle= React.createClass({
+        propTypes: {
+          title :React.PropTypes.string.isRequired,
+        },
+
+        render: function(){
+          return <h1>{this.props.title}</h1>;
+        }
+      });
+
+      var data = 123;
+
+      ReactDOM.render(
+        <MyTitle title={data} />,
+        document.getElementById('example')
+      );
     </script>
   </body>
 </html>
